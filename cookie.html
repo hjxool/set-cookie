@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    function setcookie(name, value, time) {
+      let date = new Date();
+      date.setDate(date.getDate() + time);
+      document.cookie = `${name}=${value}; expires=${date}`;
+    }
+    setcookie('dasdqweq', 7778777, 2);
+    let aasdas = document.cookie;
+    console.log(aasdas)
+    function getcookie(name) {
+      let reg = RegExp(name + '=([^;=]+)');
+      let arr = document.cookie.match(reg);
+      console.log(arr)
+    }
+    getcookie('dasdqweq')
+  </script>
+</body>
+
+</html>
